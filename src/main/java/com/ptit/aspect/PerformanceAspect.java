@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class PerformanceAspect {
 
-    @Around("execution(* com.ptot.service.ItemService.*(..))")
+    @Around("execution(* com.ptit.service.ItemService.*(..))")
     public Object measureExecutionTime(ProceedingJoinPoint pjp) throws Throwable {
         long start = System.currentTimeMillis();
         System.out.println("[PerformanceAspect - @Around] Bắt đầu đo thời gian chạy của: " + pjp.getSignature().toShortString());
